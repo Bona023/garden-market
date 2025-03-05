@@ -1,1 +1,16 @@
 @import "tailwindcss";
+@theme {
+    --color-bgDark: #001c30;
+    --color-point: #38a3a5;
+    --color-hoverPoint: #80ed99;
+    --color-hoverText: #22577a;
+    --color-inputColor: rgba(180, 180, 180, 40);
+    --color-lineColor: rgba(100, 100, 100, 40);
+    --color-warning: #ff6600;
+}
+.basicBtn {
+    @apply w-full bg-point text-lg font-semibold py-2.5 rounded-full text-center hover:bg-hoverPoint hover:text-hoverText transition-colors cursor-pointer disabled:bg-gray-500/80 disabled:text-[rgba(200,200,200,30)];
+}
+.inputText {
+    @apply bg-transparent;
+}
