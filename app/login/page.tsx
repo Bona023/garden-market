@@ -9,13 +9,6 @@ export default function EmailLogin() {
             <Signboard />
             <form className="flex flex-col gap-3 py-10">
                 <Input
-                    name="username"
-                    type="text"
-                    placeholder="Username"
-                    errors={[]}
-                    required
-                />
-                <Input
                     name="email"
                     type="text"
                     placeholder="Email"
@@ -26,13 +19,6 @@ export default function EmailLogin() {
                     name="pw"
                     type="password"
                     placeholder="Password"
-                    errors={[]}
-                    required
-                />
-                <Input
-                    name="confirmPw"
-                    type="password"
-                    placeholder="Confirm Password"
                     errors={[]}
                     required
                 />

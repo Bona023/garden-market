@@ -15,6 +15,27 @@ export default function CreateAccount() {
                     errors={[]}
                     required
                 />
+                <Input
+                    name="email"
+                    type="text"
+                    placeholder="Email"
+                    errors={[]}
+                    required
+                />
+                <Input
+                    name="password"
+                    type="password"
+                    placeholder="Password"
+                    errors={[]}
+                    required
+                />
+                <Input
+                    name="password_confirm"
+                    type="password"
+                    placeholder="Confirm Password"
+                    errors={[]}
+                    required
+                />
                 <FormBtn text="Create Account" />
             </form>
             <div className="w-full h-0.5 bg-lineColor mb-6" />
