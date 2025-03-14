@@ -1,25 +1,32 @@
+"use client";
 import FormBtn from "@/components/FormBtn";
 import Input from "@/components/input";
 import Signboard from "@/components/signboard";
 import SocialLogin from "@/components/social-login";
+import { useFormState } from "react-dom";
+import { EmailLogIn } from "./action";
 
 export default function EmailLogin() {
+    const [state, dispatch] = useFormState(EmailLogIn, null);
     return (
         <div className="flex flex-col justify-center py-14 px-6">
             <Signboard />
-            <form className="flex flex-col gap-3 py-10">
+            <form
+                action={dispatch}
+                className="flex flex-col gap-3 py-10"
+            >
                 <Input
                     name="email"
                     type="text"
                     placeholder="Email"
-                    errors={[]}
+                    errors={state?.fieldErrors.email}
                     required
                 />
                 <Input
-                    name="pw"
+                    name="password"
                     type="password"
                     placeholder="Password"
-                    errors={[]}
+                    errors={state?.fieldErrors.password}
                     required
                 />
                 <div className="h-4"></div>

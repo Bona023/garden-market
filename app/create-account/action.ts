@@ -31,7 +31,7 @@ const checkUniqueEmail = async (email: string) => {
 const formSchema = z
     .object({
         username: z.string().trim().refine(checkUniqueUsername, "This username is already taken."),
-        email: z.string().refine(checkUniqueEmail, "This email is already taken."),
+        email: z.string().email().refine(checkUniqueEmail, "This email is already taken."),
         password: z.string().min(PASSWORD_MIN_LENGTH).regex(PASSWORD_REGEX, PASSWORD_REGEX_ERROR),
         password_confirm: z.string().min(PASSWORD_MIN_LENGTH).regex(PASSWORD_REGEX, PASSWORD_REGEX_ERROR),
     })
